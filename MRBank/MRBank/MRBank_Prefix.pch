@@ -1,0 +1,30 @@
+//
+//  MRBank.pch
+//  MRBank
+//
+//  Created by manikanta rayankula on 12/07/16.
+//  Copyright © 2016 manikanta rayankula. All rights reserved.
+//
+
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
+
+#endif
+
+#define APP_DELEGATE ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#define NotNull(string) \
+(string==nil || [string isKindOfClass:[NSNull class]] || [string isEqualToString:@"(null)"] || ![string length]) ? @"" : string
+
+
+#define MainColor [UIColor colorWithRed:61.0/255.0 green:157.0/255.0 blue:70.0/255.0 alpha:1.0] 
